@@ -21,4 +21,7 @@ h2 {
   --red: #f24405;
   --azuki: #8c0303;
   --black: #231b1b;
+
+  --pc: 1024px;
+  --mobile: 480px;
 }
