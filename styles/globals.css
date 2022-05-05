@@ -12,3 +12,12 @@ h2 {
   font-family: "Trykker", "Hiragino Mincho ProN", "Hiragino Mincho Pro", 游明朝,
     "Yu Mincho", YuMincho, HGS明朝E, メイリオ, Meiryo, serif;
 }
+
+:root {
+  --ivory: #fdf7f4;
+  --white: #ffffff;
+  --orange: #f29f05;
+  --red: #f24405;
+  --azuki: #8c0303;
+  --black: #231b1b;
+}
