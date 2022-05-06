@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Contact from "../components/Contact";
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +21,8 @@ const Home: NextPage = () => {
           alt="pinch of spice logo"
         />
       </main>
+
+      <Contact />
 
       <footer className={styles.footer}>
         <p>Copyright© Pinch of Spice LLC. All Rights Reserved</p>
