@@ -4,6 +4,7 @@ import tokens from "./DesignTokens";
 import Image from "next/image";
 //@ts-ignore
 import { Link as Scroll } from "react-scroll";
+import { closeSync } from "fs";
 
 export default function Header() {
   return (
@@ -48,19 +49,32 @@ export default function Header() {
         </ul>
       </nav>
       <section css={heroStyle}>
-        <Image src="/main.jpg" width={1024} height={609} alt="eyecatch" />
-        <h1>
-          まるでひとつまみの
-          <br />
-          スパイスのように。
-        </h1>
-        <p>
-          ピンチオブスパイス合同会社は
-          <br />
-          日常にいろどりを加える
-          <br />
-          商品を企画しています。
-        </p>
+        <Image
+          src="/main.jpg"
+          width={1024}
+          height={609}
+          alt="eyecatch"
+          css={{
+            borderRadius: "1px",
+          }}
+        />
+        <div css={heroHeadingStyle}>
+          <h1>
+            まるでひとつまみの
+            <br />
+            スパイスのように。
+          </h1>
+          <p>
+            ピンチオブスパイス合同会社は
+            <br />
+            日常にいろどりを加える
+            <br />
+            商品を企画しています。
+          </p>
+        </div>
+        <Scroll to="product" smooth css={downStyle}>
+          <Image src="/down.svg" width={38} height={19} alt="scroll down" />
+        </Scroll>
       </section>
     </header>
   );
@@ -100,4 +114,34 @@ const navStyle = css`
 
 const heroStyle = css`
   margin: 32px 0;
+  position: relative;
+`;
+
+const heroHeadingStyle = css`
+  position: absolute;
+  color: ${tokens.colors.white};
+  left: 32px;
+  top: 32px;
+
+  h1 {
+    font-size: 36px;
+    letter-spacing: 0.1em;
+  }
+
+  p {
+    font-size: 16px;
+    margin-top: 16px;
+    line-height: 1.8;
+  }
+`;
+
+const downStyle = css`
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
