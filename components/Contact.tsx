@@ -3,30 +3,35 @@ import tokens from "./DesignTokens";
 
 export default function Contact() {
   return (
-    <section css={sectionStyle}>
-      <h1>Contact</h1>
-      <p>
-        商品の取り扱いや取材については、こちらからお問い合わせください。3営業日以内に返信いたします。
-      </p>
+    <>
+      <section css={sectionStyle}>
+        <h1>Contact</h1>
+        <p>
+          商品の取り扱いや取材については、こちらからお問い合わせください。3営業日以内に返信いたします。
+        </p>
 
-      <form
-        method="POST"
-        name="contact-form"
-        action="contact/?success=true"
-        data-netlify="true"
-        css={formStyle}
-      >
-        <label htmlFor="name">お名前</label>
-        <input id="name" name="name" required type="text" />
-        <label htmlFor="company">会社名</label>
-        <input id="company" name="company" required type="text" />
-        <label htmlFor="email">メールアドレス</label>
-        <input id="email" type="email" name="email" required />
-        <label htmlFor="message">お問い合わせ内容</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">送信する</button>
-      </form>
-    </section>
+        <form
+          method="POST"
+          name="contact-form"
+          action="contact/?success=true"
+          data-netlify="true"
+          css={formStyle}
+        >
+          <label htmlFor="name">お名前</label>
+          <input id="name" name="name" required type="text" />
+          <label htmlFor="company">会社名</label>
+          <input id="company" name="company" required type="text" />
+          <label htmlFor="email">メールアドレス</label>
+          <input id="email" type="email" name="email" required />
+          <label htmlFor="message">お問い合わせ内容</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">送信する</button>
+        </form>
+      </section>
+      <footer>
+        <p>Copyright© Pinch of Spice LLC. All Rights Reserved</p>
+      </footer>
+    </>
   );
 }
 
