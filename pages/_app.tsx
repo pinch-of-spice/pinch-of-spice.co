@@ -1,8 +1,8 @@
 import type { AppProps } from "next/app";
 import { Global, css } from "@emotion/react";
+import tokens from "../components/DesignTokens";
 // @ts-ignore
 import ress from "ress";
-import tokens from "../components/DesignTokens";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
