@@ -2,25 +2,49 @@ import { css } from "@emotion/react";
 import Link from "next/link";
 import tokens from "./DesignTokens";
 import Image from "next/image";
+//@ts-ignore
+import { Link as Scroll } from "react-scroll";
 
 export default function Header() {
   return (
     <header>
       <nav css={navStyle}>
         <Link href="/">
-          <Image
-            src="/poc.svg"
-            width={184}
-            height={29}
-            alt="pinch of spice logo"
-          />
+          <a>
+            <Image
+              src="/poc.svg"
+              width={184}
+              height={29}
+              alt="pinch of spice logo"
+            />
+          </a>
         </Link>
         <ul>
-          <li>Product</li>
-          <li>News</li>
-          <li>Company</li>
-          <li>Member</li>
-          <li>Contact</li>
+          <li>
+            <Scroll to="product" smooth>
+              Product
+            </Scroll>
+          </li>
+          <li>
+            <Scroll to="news" smooth>
+              News
+            </Scroll>
+          </li>
+          <li>
+            <Scroll to="company" smooth>
+              Company
+            </Scroll>
+          </li>
+          <li>
+            <Scroll to="member" smooth>
+              Member
+            </Scroll>
+          </li>
+          <li>
+            <Scroll to="contact" smooth>
+              Contact
+            </Scroll>
+          </li>
         </ul>
       </nav>
       <section css={heroStyle}>
@@ -52,6 +76,10 @@ const navStyle = css`
 
     li {
       margin-left: 24px;
+
+      a {
+        cursor: pointer;
+      }
     }
   }
 `;

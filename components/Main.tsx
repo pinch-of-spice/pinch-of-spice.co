@@ -5,16 +5,16 @@ export default function Main() {
   return (
     <>
       <section>
-        <h1>Product</h1>
+        <h1 id="product">Product</h1>
       </section>
       <section>
-        <h1>News</h1>
+        <h1 id="news">News</h1>
       </section>
       <section>
-        <h1>Company</h1>
+        <h1 id="company">Company</h1>
       </section>
       <section>
-        <h1>Member</h1>
+        <h1 id="member">Member</h1>
       </section>
     </>
   );

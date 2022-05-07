@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <>
       <section css={sectionStyle}>
-        <h1>Contact</h1>
+        <h1 id="contact">Contact</h1>
         <p>
           商品の取り扱いや取材については、こちらからお問い合わせください。3営業日以内に返信いたします。
         </p>

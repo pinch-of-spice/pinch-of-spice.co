@@ -1,8 +1,7 @@
 import type { AppProps } from "next/app";
 import { Global, css } from "@emotion/react";
 import tokens from "../components/DesignTokens";
-// @ts-ignore
-import ress from "ress";
+import "ress";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,8 +15,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 export default MyApp;
 
 const globalStyle = css`
-  ${ress}
-
   html,
   body {
     font-family: -apple-system, "Helvetica Neue", "游ゴシック体", YuGothic,
