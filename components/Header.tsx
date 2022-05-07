@@ -79,10 +79,25 @@ const navStyle = css`
 
       a {
         cursor: pointer;
+        display: block;
+
+        &:hover {
+          color: ${tokens.colors.red};
+
+          &::after {
+            display: block;
+            margin: 1px auto 0;
+            width: 80%;
+            height: 1px;
+            background: ${tokens.colors.red};
+            content: "";
+          }
+        }
       }
     }
   }
 `;
+
 const heroStyle = css`
   margin: 32px 0;
 `;
