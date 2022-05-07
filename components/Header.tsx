@@ -4,7 +4,6 @@ import tokens from "./DesignTokens";
 import Image from "next/image";
 //@ts-ignore
 import { Link as Scroll } from "react-scroll";
-import { closeSync } from "fs";
 
 export default function Header() {
   return (
