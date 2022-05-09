@@ -72,6 +72,7 @@ const productStyle = css`
 
     p {
       line-height: 1.8;
+      text-align: justify;
     }
 
     ul {
