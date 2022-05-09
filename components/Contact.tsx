@@ -1,7 +1,23 @@
 import { css } from "@emotion/react";
 import tokens from "./DesignTokens";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+type Inputs = {
+  name: string;
+  company: string;
+  email: string;
+  message: string;
+};
 
 export default function Contact() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+
   return (
     <>
       <section css={sectionStyle}>
@@ -15,36 +31,57 @@ export default function Contact() {
         <form
           method="POST"
           name="contact-form"
-          action="contact/?success=true"
-          data-netlify="true"
+          onSubmit={handleSubmit(onSubmit)}
+          data-netlify
           css={formStyle}
         >
-          <label htmlFor="name">お名前</label>
+          <label htmlFor="name">
+            お名前
+            {errors.name?.type === "required" && (
+              <span>*この項目は必須です</span>
+            )}
+          </label>
           <input
             id="name"
-            name="name"
-            required
             type="text"
             placeholder="林田 幸一"
+            {...register("name", { required: true })}
           />
-          <label htmlFor="company">会社名</label>
+          <label htmlFor="company">
+            会社名
+            {errors.company?.type === "required" && (
+              <span>*この項目は必須です</span>
+            )}
+          </label>
           <input
             id="company"
-            name="company"
-            required
             type="text"
             placeholder="Pinch of Spice合同会社"
+            {...register("company", { required: true })}
           />
-          <label htmlFor="email">メールアドレス</label>
+          <label htmlFor="email">
+            メールアドレス
+            {errors.email?.type === "required" && (
+              <span>*この項目は必須です</span>
+            )}
+          </label>
           <input
             id="email"
             type="email"
-            name="email"
-            required
             placeholder="info@pinch-of-spice.co"
+            {...register("email", { required: true })}
           />
-          <label htmlFor="message">お問い合わせ内容</label>
-          <textarea id="message" name="message" rows={8} required></textarea>
+          <label htmlFor="message">
+            お問い合わせ内容
+            {errors.message?.type === "required" && (
+              <span>*この項目は必須です</span>
+            )}
+          </label>
+          <textarea
+            id="message"
+            rows={8}
+            {...register("message", { required: true })}
+          ></textarea>
           <button type="submit">送信する</button>
         </form>
       </section>
@@ -85,6 +122,11 @@ const formStyle = css`
 
   label {
     margin-bottom: 8px;
+
+    span {
+      margin-left: 8px;
+      color: ${tokens.colors.red};
+    }
   }
 
   input,
