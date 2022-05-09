@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Pinch of Spice LLC. | ピンチオブスパイス合同会社</title>
+        <title>Pinch of Spice LLC. | ピンチオブスパイス</title>
       </Head>
 
       <main css={layoutStyle}>
@@ -33,5 +33,5 @@ export default Home;
 const layoutStyle = css`
   width: ${tokens.siteWidth.pc};
   margin: 0 auto;
-  padding: 32px 0;
+  padding: 32px 0 64px;
 `;

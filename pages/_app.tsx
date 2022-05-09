@@ -41,9 +41,6 @@ const globalStyle = css`
     list-style: none;
   }
 
-  main > section {
-  }
-
   main {
     > section {
       padding: 64px 132px;

@@ -8,7 +8,7 @@ export default function Company() {
       <dl css={companyStyle}>
         <div>
           <dt>会社名</dt>
-          <dd>Pinch of Spice合同会社（ピンチオブスパイス合同会社）</dd>
+          <dd>Pinch of Spice合同会社（ピンチオブスパイス）</dd>
         </div>
         <div>
           <dt>所在地</dt>
