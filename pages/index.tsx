@@ -3,7 +3,10 @@ import { css } from "@emotion/react";
 import tokens from "../components/DesignTokens";
 import Head from "next/head";
 import Header from "../components/Header";
-import Main from "../components/Main";
+import Products from "../components/Products";
+import News from "../components/News";
+import Company from "../components/Company";
+import Members from "../components/Members";
 import Contact from "../components/Contact";
 
 const Home: NextPage = () => {
@@ -15,7 +18,10 @@ const Home: NextPage = () => {
 
       <main css={layoutStyle}>
         <Header />
-        <Main />
+        <Products />
+        <News />
+        <Company />
+        <Members />
         <Contact />
       </main>
     </>
