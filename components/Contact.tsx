@@ -22,14 +22,12 @@ export default function Contact() {
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    alert(JSON.stringify(data));
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact-form", ...data }),
     })
       .then(() => {
-        console.log(isSubmitting);
         console.log("Success!");
       })
       .catch((error) => console.log(error));
