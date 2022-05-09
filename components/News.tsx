@@ -8,16 +8,14 @@ export default function News() {
         <ol css={newsStyle}>
           <li>
             <span>2022/04/30</span>
-            <div>
-              <a
-                href="https://camp-fire.jp/projects/view/550881"
-                target="_blank"
-                rel="noreferrer"
-              >
-                クラウドファウンディング
-                CAMPFIREにて「RINDA」が目標金額を170%達成いたしました。
-              </a>
-            </div>
+            <a
+              href="https://camp-fire.jp/projects/view/550881"
+              target="_blank"
+              rel="noreferrer"
+            >
+              クラウドファウンディング
+              CAMPFIREにて「RINDA」が目標金額を170%達成いたしました。
+            </a>
           </li>
         </ol>
       </section>
@@ -26,16 +24,21 @@ export default function News() {
 }
 
 const newsStyle = css`
-  width: 760px;
   margin: 0 auto;
 
   > li {
     span {
-      margin-left: 35px;
+      margin-right: 40px;
     }
 
     + li {
       margin-top: 16px;
+    }
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
     }
   }
 `;

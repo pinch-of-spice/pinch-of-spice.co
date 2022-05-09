@@ -45,7 +45,7 @@ const globalStyle = css`
 
   main {
     > section {
-      padding: 64px 0;
+      padding: 64px 132px;
 
       > h1 {
         font-size: 36px;

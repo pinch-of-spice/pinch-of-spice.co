@@ -54,8 +54,6 @@ export default function Products() {
 
 const productStyle = css`
   display: flex;
-  width: 760px;
-  margin: 0 auto;
   padding: 24px;
   border-radius: 32px;
   background: ${tokens.colors.black};
