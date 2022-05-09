@@ -85,7 +85,6 @@ const navStyle = css`
 
   ul {
     display: flex;
-    list-style: none;
 
     li {
       margin-left: 24px;
