@@ -9,6 +9,12 @@ type Inputs = {
   message: string;
 };
 
+function encode(data: any) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export default function Contact() {
   const {
     register,
@@ -16,7 +22,16 @@ export default function Contact() {
     watch,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    alert(JSON.stringify(data));
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...data }),
+    })
+      .then(() => console.log("Success!"))
+      .catch((error) => console.log(error));
+  };
 
   return (
     <>
