@@ -33,6 +33,7 @@ const globalStyle = css`
   h2 {
     font-family: "Trykker", "Hiragino Mincho ProN", "Hiragino Mincho Pro",
       游明朝, "Yu Mincho", YuMincho, HGS明朝E, メイリオ, Meiryo, serif;
+    letter-spacing: 0.1em;
   }
 
   ul,
