@@ -59,7 +59,6 @@ export default function Contact() {
               method="POST"
               name="contact-form"
               onSubmit={handleSubmit(onSubmit)}
-              data-netlify
               css={formStyle}
             >
               <label htmlFor="name">
