@@ -54,9 +54,9 @@ export default function Contact() {
         ) : (
           <>
             <p>
-              商品の取り扱いや取材については、こちらからお問い合わせください。
-              <br />
-              3営業日以内に返信いたします。
+              商品の取り扱いや取材については、
+              <span>こちらからお問い合わせください。</span>
+              <span>3営業日以内に返信いたします。</span>
             </p>
             <form
               method="POST"
@@ -136,6 +136,20 @@ const sectionStyle = css`
   p {
     text-align: center;
     margin-bottom: 32px;
+
+    span {
+      :last-child {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: ${tokens.siteWidth.mobile}) {
+    margin: 0;
+
+    p span {
+      display: block;
+    }
   }
 `;
 
@@ -184,6 +198,10 @@ const formStyle = css`
     :disabled {
       background: ${tokens.colors.orange};
     }
+  }
+
+  @media (max-width: ${tokens.siteWidth.mobile}) {
+    width: 100%;
   }
 `;
 

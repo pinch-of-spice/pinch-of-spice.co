@@ -34,4 +34,8 @@ const layoutStyle = css`
   width: ${tokens.siteWidth.pc};
   margin: 0 auto;
   padding: 32px 0 64px;
+
+  @media (max-width: ${tokens.siteWidth.mobile}) {
+    width: ${tokens.siteWidth.mobile};
+  }
 `;

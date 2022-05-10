@@ -13,6 +13,8 @@ export default function Members() {
             width={364}
             height={246}
             alt="Koichi Hayashida"
+            loading={"eager"}
+            layout="responsive"
           />
           <h2>林田 幸一</h2>
           <p>
@@ -25,6 +27,8 @@ export default function Members() {
             width={364}
             height={246}
             alt="Takaya Deguchi"
+            loading={"eager"}
+            layout="responsive"
           />
           <h2>出口 貴也</h2>
           <p>
@@ -37,6 +41,8 @@ export default function Members() {
             width={364}
             height={246}
             alt="Miwa Kuramitsu"
+            loading={"eager"}
+            layout="responsive"
           />
           <h2>倉光 美和</h2>
           <p>
@@ -49,6 +55,8 @@ export default function Members() {
             width={364}
             height={246}
             alt="and more..."
+            loading={"eager"}
+            layout="responsive"
           />
           <h2>And more...</h2>
         </li>
@@ -73,5 +81,18 @@ const memberStyle = css`
   p {
     line-height: 1.8;
     text-align: justify;
+  }
+
+  @media (max-width: ${tokens.siteWidth.mobile}) {
+    grid-template-columns: 100%;
+
+    li {
+      width: 100%;
+      padding: 0 10px;
+
+      span {
+        width: 100%;
+      }
+    }
   }
 `;

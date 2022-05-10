@@ -7,14 +7,20 @@ export default function Products() {
     <section>
       <h1 id="product">Product</h1>
       <article css={productStyle}>
-        <Image
-          src="/rinda.jpg"
-          width={302}
-          height={302}
-          alt="RINDA"
-          css={{ borderRadius: "16px" }}
-        />
         <div>
+          <Image
+            src="/rinda.jpg"
+            width={432}
+            height={432}
+            alt="RINDA"
+            css={{ borderRadius: "16px" }}
+            loading={"eager"}
+            layout="responsive"
+            objectFit={"cover"}
+            priority
+          />
+        </div>
+        <div css={productDescriptionStyle}>
           <span>クラフトビネガードリンク</span>
           <h2>RINDA</h2>
           <p>
@@ -60,53 +66,80 @@ const productStyle = css`
   color: ${tokens.colors.white};
 
   > div {
-    flex: 1;
-    display: flex;
+    width: 302px;
+  }
+
+  @media (max-width: ${tokens.siteWidth.mobile}) {
     flex-direction: column;
-    margin-left: 24px;
+    margin: 0 -24px;
+    border-radius: 0;
+
+    > div {
+      width: 100%;
+    }
+  }
+`;
+
+const productDescriptionStyle = css`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+
+  h2 {
+    margin: 12px 0 28px;
+    font-size: 36px;
+  }
+
+  p {
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  ul {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      background: rgba(196, 196, 196, 0.1);
+      border-radius: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      a {
+        padding: 6px 15px;
+      }
+
+      &:last-child {
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+
+        a {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: ${tokens.siteWidth.mobile}) {
+    margin-left: 0;
+    margin-top: 20px;
 
     h2 {
-      margin: 12px 0 28px;
-      font-size: 36px;
-    }
-
-    p {
-      line-height: 1.8;
-      text-align: justify;
+      margin: 6px 0 14px;
     }
 
     ul {
-      margin-top: auto;
-      display: flex;
-      justify-content: space-between;
-
-      li {
-        background: rgba(196, 196, 196, 0.1);
-        border-radius: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-
-        &:hover {
-          opacity: 0.8;
-          cursor: pointer;
-        }
-
-        a {
-          padding: 6px 15px;
-        }
-
-        &:last-child {
-          border-radius: 50%;
-          width: 48px;
-          height: 48px;
-
-          a {
-            padding: 0;
-          }
-        }
-      }
+      margin-top: 24px;
     }
   }
 `;

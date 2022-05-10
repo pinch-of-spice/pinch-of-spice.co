@@ -50,6 +50,10 @@ const globalStyle = css`
         text-align: center;
         margin-bottom: 64px;
       }
+
+      @media (max-width: ${tokens.siteWidth.mobile}) {
+        padding: 64px 24px;
+      }
     }
   }
 

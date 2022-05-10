@@ -16,6 +16,7 @@ export default function Header() {
               width={185}
               height={35}
               alt="pinch of spice logo"
+              priority
             />
           </a>
         </Link>
@@ -52,7 +53,10 @@ export default function Header() {
           src="/main.jpg"
           width={1024}
           height={609}
+          priority
           alt="eyecatch"
+          layout="fill"
+          objectFit={"cover"}
           css={{
             borderRadius: "1px",
           }}
@@ -109,11 +113,24 @@ const navStyle = css`
       }
     }
   }
+
+  @media (max-width: ${tokens.siteWidth.mobile}) {
+    padding: 0 10px;
+
+    ul {
+      display: none;
+    }
+  }
 `;
 
 const heroStyle = css`
   margin: 32px 0;
   position: relative;
+  height: 609px;
+
+  @media (max-width: ${tokens.siteWidth.mobile}) {
+    height: 600px;
+  }
 `;
 
 const heroHeadingStyle = css`
