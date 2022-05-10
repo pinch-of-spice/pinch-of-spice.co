@@ -30,7 +30,10 @@ export default function Contact() {
       .then(() => {
         console.log("Success!");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        alert("エラーが発生しました。リロード後、再度お試しください。");
+      });
   };
 
   return (
