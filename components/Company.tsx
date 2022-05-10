@@ -44,4 +44,15 @@ const companyStyle = css`
     width: 100px;
     margin-right: 32px;
   }
+
+  @media (max-width: ${tokens.siteWidth.mobile}) {
+    dt {
+      width: 20%;
+      margin-right: 10px;
+    }
+
+    dd {
+      width: 80%;
+    }
+  }
 `;
