@@ -13,8 +13,8 @@ export default function Header() {
           <a>
             <Image
               src="/poc.svg"
-              width={184}
-              height={29}
+              width={185}
+              height={35}
               alt="pinch of spice logo"
             />
           </a>
@@ -82,6 +82,7 @@ export default function Header() {
 const navStyle = css`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   ul {
     display: flex;
