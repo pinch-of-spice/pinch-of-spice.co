@@ -210,6 +210,7 @@ const footerStyle = css`
 
   p {
     text-align: center;
+    padding: 0 20px;
   }
 `;
 
