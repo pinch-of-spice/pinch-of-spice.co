@@ -8,7 +8,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Trykker&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <meta name="description" content="Pinch of Spice LLC." />
       </Head>
       <body>
