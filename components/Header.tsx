@@ -129,7 +129,7 @@ const heroStyle = css`
   height: 609px;
 
   @media (max-width: ${tokens.siteWidth.mobile}) {
-    height: 600px;
+    height: 500px;
   }
 `;
 
