@@ -49,6 +49,8 @@ const globalStyle = css`
         font-size: 36px;
         text-align: center;
         margin-bottom: 64px;
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: none;
       }
 
       @media (max-width: ${tokens.siteWidth.mobile}) {
