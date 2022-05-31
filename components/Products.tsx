@@ -13,7 +13,6 @@ export default function Products() {
             width={432}
             height={432}
             alt="RINDA"
-            css={{ borderRadius: "16px" }}
             loading={"eager"}
             layout="responsive"
             objectFit={"cover"}
@@ -61,8 +60,8 @@ export default function Products() {
 const productStyle = css`
   display: flex;
   padding: 24px;
-  border-radius: 32px;
-  background: ${tokens.colors.black};
+  background: rgba(94, 2, 2, 1);
+  box-shadow: 8px 8px 0px #e4d3d0;
   color: ${tokens.colors.white};
 
   > div {
@@ -102,7 +101,7 @@ const productDescriptionStyle = css`
     justify-content: space-between;
 
     li {
-      background: rgba(196, 196, 196, 0.1);
+      background: rgba(255, 255, 255, 0.2);
       border-radius: 70px;
       display: flex;
       justify-content: center;
