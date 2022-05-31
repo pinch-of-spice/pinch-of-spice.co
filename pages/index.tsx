@@ -31,7 +31,8 @@ const Home: NextPage = () => {
 export default Home;
 
 const layoutStyle = css`
-  width: ${tokens.siteWidth.pc};
+  max-width: 1024px;
+  width: 100%;
   margin: 0 auto;
   padding: 32px 0 64px;
 

@@ -8,7 +8,7 @@ const tokens = {
     black: "#231b1b",
   },
   siteWidth: {
-    pc: "824px",
+    pc: "1024px",
     mobile: "480px",
   },
 };

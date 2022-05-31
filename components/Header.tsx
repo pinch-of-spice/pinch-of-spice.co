@@ -87,6 +87,7 @@ const navStyle = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 32px;
 
   ul {
     display: flex;
