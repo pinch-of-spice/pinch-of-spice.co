@@ -47,14 +47,16 @@ const globalStyle = css`
 
   main {
     > section {
-      padding: 64px 132px;
+      padding: 64px 0;
+      max-width: 760px;
+      margin: 0 auto;
 
       > h1 {
         font-size: 36px;
         text-align: center;
         margin-bottom: 64px;
-        -webkit-font-smoothing: none;
-        -moz-osx-font-smoothing: none;
+        /* -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: none; */
       }
 
       @media (max-width: ${tokens.siteWidth.mobile}) {

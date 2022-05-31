@@ -49,36 +49,21 @@ export default function Header() {
         </ul>
       </nav>
       <section css={heroStyle}>
-        <Image
-          src="/main.jpg"
-          width={1024}
-          height={609}
-          priority
-          alt="eyecatch"
-          layout="fill"
-          objectFit={"cover"}
-          css={{
-            borderRadius: "1px",
-          }}
-        />
-        <div css={heroHeadingStyle}>
-          <h1>
-            まるでひとつまみの
-            <br />
-            スパイスのように。
-          </h1>
-          <p>
-            ピンチオブスパイス合同会社は
-            <br />
-            日常にいろどりを加える
-            <br />
-            商品を企画しています。
-          </p>
+        <div>
+          <Image
+            src="/copy.png"
+            width={216}
+            height={216}
+            alt="まるでひとつまみのスパイスのように"
+          />
         </div>
         <Scroll to="product" smooth css={downStyle}>
           <Image src="/down.svg" width={38} height={19} alt="scroll down" />
         </Scroll>
       </section>
+      <p>
+        ピンチオブスパイス合同会社は日常にいろどりを加える商品を企画しています。
+      </p>
     </header>
   );
 }
@@ -127,28 +112,20 @@ const navStyle = css`
 const heroStyle = css`
   margin: 32px 0;
   position: relative;
-  height: 609px;
+  background-image: url("/main.jpg");
+  background-size: cover;
+  height: 0;
+  padding-top: calc(609 / 1024 * 100%);
+
+  > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   @media (max-width: ${tokens.siteWidth.mobile}) {
-    height: 500px;
-  }
-`;
-
-const heroHeadingStyle = css`
-  position: absolute;
-  color: ${tokens.colors.white};
-  left: 32px;
-  top: 32px;
-
-  h1 {
-    font-size: 36px;
-    letter-spacing: 0.1em;
-  }
-
-  p {
-    font-size: 16px;
-    margin-top: 16px;
-    line-height: 1.8;
+    /* height: 500px; */
   }
 `;
 
