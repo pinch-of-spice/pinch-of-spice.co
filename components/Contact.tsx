@@ -128,6 +128,7 @@ export default function Contact() {
 const sectionStyle = css`
   background: ${tokens.colors.white};
   margin: 0 calc(50% - 50vw);
+  max-width: none;
 
   h1 {
     margin-bottom: 16px;
