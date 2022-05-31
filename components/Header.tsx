@@ -125,7 +125,13 @@ const heroStyle = css`
   }
 
   @media (max-width: ${tokens.siteWidth.mobile}) {
-    /* height: 500px; */
+    background-image: url("/main_sp.jpg");
+    padding-top: calc(493 / 375 * 100%);
+
+    > div {
+      width: 160px;
+      height: 160px;
+    }
   }
 `;
 
