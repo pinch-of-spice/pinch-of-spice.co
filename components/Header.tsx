@@ -61,8 +61,8 @@ export default function Header() {
           <Image src="/down.svg" width={38} height={19} alt="scroll down" />
         </Scroll>
       </section>
-      <p>
-        ピンチオブスパイス合同会社は日常にいろどりを加える商品を企画しています。
+      <p css={{ textAlign: "center" }}>
+        ピンチオブスパイスは、日常にいろどりを加える商品を企画しています。
       </p>
     </header>
   );
@@ -110,7 +110,7 @@ const navStyle = css`
 `;
 
 const heroStyle = css`
-  margin: 32px 0;
+  margin: 24px 0;
   position: relative;
   background-image: url("/main.jpg");
   background-size: cover;
@@ -139,6 +139,7 @@ const downStyle = css`
   position: absolute;
   left: 50%;
   bottom: 40px;
+  transform: translateX(-50%);
   cursor: pointer;
 
   &:hover {
