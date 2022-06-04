@@ -83,17 +83,25 @@ const navStyle = css`
       a {
         cursor: pointer;
         display: block;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          display: block;
+          margin: 4px auto 0;
+          width: 100%;
+          height: 1px;
+          background: ${tokens.colors.red};
+          content: "";
+          opacity: 0;
+          transition: opacity 0.5s ease-out;
+        }
 
         &:hover {
           color: ${tokens.colors.red};
 
           &::after {
-            display: block;
-            margin: 1px auto 0;
-            width: 80%;
-            height: 1px;
-            background: ${tokens.colors.red};
-            content: "";
+            opacity: 1;
           }
         }
       }

@@ -9,7 +9,7 @@ const tokens = {
   },
   siteWidth: {
     pc: "1024px",
-    mobile: "480px",
+    mobile: "824px",
   },
 };
 export default tokens;
