@@ -29,6 +29,7 @@ const newsStyle = css`
   > li {
     span {
       margin-right: 40px;
+      opacity: 0.6;
     }
 
     + li {

@@ -43,6 +43,7 @@ const companyStyle = css`
   dt {
     width: 100px;
     margin-right: 32px;
+    opacity: 0.6;
   }
 
   @media (max-width: ${tokens.siteWidth.mobile}) {
