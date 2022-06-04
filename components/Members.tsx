@@ -94,11 +94,17 @@ const memberStyle = css`
 
     li {
       width: 100%;
-      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       span {
         width: 100%;
       }
+    }
+
+    p {
+      max-width: 390px;
     }
   }
 `;
@@ -117,5 +123,13 @@ const memberCaptionStyle = css`
   span {
     font-size: 12px;
     display: block;
+  }
+
+  @media (max-width: ${tokens.siteWidth.mobile}) {
+    text-align: center;
+
+    h2 {
+      margin-top: 16px;
+    }
   }
 `;
