@@ -8,7 +8,7 @@ export default function Company() {
       <dl css={companyStyle}>
         <div>
           <dt>会社名</dt>
-          <dd>Pinch of Spice合同会社（ピンチオブスパイス）</dd>
+          <dd>Pinch of Spice合同会社（ピンチオブスパイス合同会社）</dd>
         </div>
         <div>
           <dt>所在地</dt>
@@ -47,13 +47,12 @@ const companyStyle = css`
   }
 
   @media (max-width: ${tokens.siteWidth.mobile}) {
-    dt {
-      width: 20%;
-      margin-right: 10px;
+    > div {
+      flex-direction: column;
     }
 
-    dd {
-      width: 80%;
+    dt {
+      margin-bottom: 4px;
     }
   }
 `;

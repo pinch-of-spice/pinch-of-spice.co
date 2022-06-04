@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import tokens from "../components/DesignTokens";
 
 export default function News() {
   return (
@@ -60,6 +61,14 @@ const newsStyle = css`
   a {
     &:hover {
       text-decoration: underline;
+    }
+  }
+  @media (max-width: ${tokens.siteWidth.mobile}) {
+    > li {
+      span {
+        display: block;
+        margin-bottom: 4px;
+      }
     }
   }
 `;
