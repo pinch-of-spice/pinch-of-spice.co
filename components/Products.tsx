@@ -107,9 +107,10 @@ const productDescriptionStyle = css`
       justify-content: center;
       align-items: center;
       font-weight: bold;
+      transition: background 0.3s ease-out;
 
       &:hover {
-        opacity: 0.8;
+        background: rgba(255, 255, 255, 0.12);
         cursor: pointer;
       }
 
