@@ -60,7 +60,11 @@ const globalStyle = css`
       }
 
       @media (max-width: ${tokens.siteWidth.mobile}) {
-        padding: 64px 24px;
+        padding: 64px 16px;
+
+        > h1 {
+          margin-bottom: 37px;
+        }
       }
     }
   }

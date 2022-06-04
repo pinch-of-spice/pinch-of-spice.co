@@ -70,7 +70,6 @@ const productStyle = css`
 
   @media (max-width: ${tokens.siteWidth.mobile}) {
     flex-direction: column;
-    margin: 0 -24px;
     border-radius: 0;
 
     > div {
