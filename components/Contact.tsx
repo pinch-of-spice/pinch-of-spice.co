@@ -93,12 +93,18 @@ export default function Contact() {
                 {errors.email?.type === "required" && (
                   <span>*この項目は必須です</span>
                 )}
+                {errors.email?.type === "pattern" && (
+                  <span>*無効なメールアドレスです</span>
+                )}
               </label>
               <input
                 id="email"
                 type="email"
                 placeholder="info@pinch-of-spice.co"
-                {...register("email", { required: true })}
+                {...register("email", {
+                  required: true,
+                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                })}
               />
               <label htmlFor="message">
                 お問い合わせ内容
