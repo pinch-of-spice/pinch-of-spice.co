@@ -7,6 +7,16 @@ export default function News() {
         <h1 id="news">News</h1>
         <ol css={newsStyle}>
           <li>
+            <span>2022/06/01</span>
+            <a
+              href="https://www.sendenkaigi.com/books/back-number-brain/detail.php?id=27849"
+              target="_blank"
+              rel="noreferrer"
+            >
+              月間ブレーン7月号「今月のブックマーク」にて、RINDAが掲載されました。
+            </a>
+          </li>
+          <li>
             <span>2022/04/30</span>
             <a
               href="https://camp-fire.jp/projects/view/550881"
@@ -14,7 +24,17 @@ export default function News() {
               rel="noreferrer"
             >
               クラウドファウンディング
-              CAMPFIREにて「RINDA」が目標金額を170%達成いたしました。
+              「CAMPFIRE」にて、RINDAが目標金額を170%達成いたしました。
+            </a>
+          </li>
+          <li>
+            <span>2022/03/18</span>
+            <a
+              href="https://resize.fm/ep/72-vinegar-drink-rinda"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ポッドキャスト「resize.fm」にて、RINDAのデザインについて出口と倉光が話しました。
             </a>
           </li>
         </ol>
