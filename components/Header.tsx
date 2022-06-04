@@ -61,7 +61,7 @@ export default function Header() {
           <Image src="/down.svg" width={38} height={19} alt="scroll down" />
         </Scroll>
       </section>
-      <p css={{ textAlign: "center" }}>
+      <p css={pStyle}>
         ピンチオブスパイスは、日常にいろどりを加える商品を企画しています。
       </p>
     </header>
@@ -109,7 +109,7 @@ const navStyle = css`
   }
 
   @media (max-width: ${tokens.siteWidth.mobile}) {
-    padding: 0 10px;
+    padding: 0 16px;
 
     ul {
       display: none;
@@ -135,6 +135,7 @@ const heroStyle = css`
   @media (max-width: ${tokens.siteWidth.mobile}) {
     background-image: url("/main_sp.jpg");
     padding-top: calc(493 / 375 * 100%);
+    margin: 17px 0;
 
     > div {
       width: 160px;
@@ -146,11 +147,32 @@ const heroStyle = css`
 const downStyle = css`
   position: absolute;
   left: 50%;
-  bottom: 40px;
+  bottom: 35px;
   transform: translateX(-50%);
   cursor: pointer;
+  animation: arrowmove 1s ease-in-out infinite;
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @keyframes arrowmove {
+    0% {
+      bottom: 40px;
+    }
+    50% {
+      bottom: 35px;
+    }
+    100% {
+      bottom: 40px;
+    }
+  }
+`;
+
+const pStyle = css`
+  text-align: center;
+
+  @media (max-width: ${tokens.siteWidth.mobile}) {
+    padding: 0 25px;
   }
 `;

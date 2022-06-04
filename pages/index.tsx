@@ -38,5 +38,6 @@ const layoutStyle = css`
 
   @media (max-width: ${tokens.siteWidth.mobile}) {
     width: 100%;
+    padding: 22px 0;
   }
 `;
