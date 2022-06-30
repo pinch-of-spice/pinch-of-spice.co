@@ -19,6 +19,7 @@
     "ress": "^5.0.2"
   },
   "devDependencies": {
+    "@types/gtag.js": "^0.0.10",
     "@types/node": "17.0.31",
     "@types/react": "18.0.8",
     "@types/react-dom": "18.0.3",
