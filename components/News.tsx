@@ -8,25 +8,24 @@ export default function News() {
         <h1 id="news">News</h1>
         <ol css={newsStyle}>
           <li>
-            <span>2023/04/15~16</span>
+            <span>2023/04/15</span>
             <a
-              href="https://www.featuredprojects.jp/"
+              href="https://krafts-and.co/garage"
               target="_blank"
               rel="noreferrer"
             >
-              ポップアップストア「「KRAFTS&Co.
-              GARAGE」（東京都目黒区）内のカフェにてRINDAの提供が決定しました。
+              ポップアップストア「KRAFTS&Co.
+              GARAGE」内カフェにてRINDAの販売が決定しました。
             </a>
           </li>
           <li>
-            <span>2023/04/08~09</span>
+            <span>2023/04/08</span>
             <a
               href="https://www.featuredprojects.jp/"
               target="_blank"
               rel="noreferrer"
             >
-              イベント「Featured Projects
-              2023」（東京都港区）にてRINDAの出店が決定しました。
+              イベント「Featured Projects 2023」にてRINDAの出店が決定しました。
             </a>
           </li>
           <li>
@@ -36,7 +35,7 @@ export default function News() {
               target="_blank"
               rel="noreferrer"
             >
-              スマートバンク社主催「DESIGN HOOKS
+              「DESIGN HOOKS
               #1」にて、RINDAのデザインについて倉光と出口が話しました。
             </a>
           </li>
