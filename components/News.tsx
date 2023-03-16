@@ -8,6 +8,39 @@ export default function News() {
         <h1 id="news">News</h1>
         <ol css={newsStyle}>
           <li>
+            <span>2023/04/15~16</span>
+            <a
+              href="https://www.featuredprojects.jp/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ポップアップストア「「KRAFTS&Co.
+              GARAGE」（東京都目黒区）内のカフェにてRINDAの提供が決定しました。
+            </a>
+          </li>
+          <li>
+            <span>2023/04/08~09</span>
+            <a
+              href="https://www.featuredprojects.jp/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              イベント「Featured Projects
+              2023」（東京都港区）にてRINDAの出店が決定しました。
+            </a>
+          </li>
+          <li>
+            <span>2022/08/25</span>
+            <a
+              href="https://smartbank.connpass.com/event/254271/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              スマートバンク社主催「DESIGN HOOKS
+              #1」にて、RINDAのデザインについて倉光と出口が話しました。
+            </a>
+          </li>
+          <li>
             <span>2022/06/01</span>
             <a
               href="https://www.sendenkaigi.com/books/back-number-brain/detail.php?id=27849"
