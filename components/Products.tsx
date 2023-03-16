@@ -27,12 +27,8 @@ export default function Products() {
           </p>
           <ul>
             <li>
-              <a
-                href="https://camp-fire.jp/projects/view/550881"
-                target="_blank"
-                rel="noreferrer"
-              >
-                CAMPFIREを見る
+              <a href="https://rinda.today/" target="_blank" rel="noreferrer">
+                販売サイトを見る
               </a>
             </li>
             <li>
@@ -44,10 +40,20 @@ export default function Products() {
               >
                 <Image
                   src="/instagram.svg"
-                  width={32}
-                  height={32}
+                  width={26}
+                  height={26}
                   alt="Instagram"
                 />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://camp-fire.jp/projects/view/550881"
+                target="_blank"
+                rel="noreferrer"
+                css={{ height: "32px" }}
+              >
+                <Image src="/web.svg" width={32} height={32} alt="Campfire" />
               </a>
             </li>
           </ul>
@@ -97,7 +103,7 @@ const productDescriptionStyle = css`
   ul {
     margin-top: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     li {
       background: rgba(255, 255, 255, 0.2);
@@ -117,13 +123,21 @@ const productDescriptionStyle = css`
         padding: 6px 15px;
       }
 
-      &:last-child {
+      &:nth-child(1) {
+        margin-right: auto;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
         border-radius: 50%;
         width: 48px;
         height: 48px;
+        margin-left: 10px;
 
         a {
           padding: 0;
+          display: flex;
+          align-items: center;
         }
       }
     }
