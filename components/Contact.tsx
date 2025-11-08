@@ -3,6 +3,7 @@ import tokens from "./DesignTokens";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
+  inquiryType: string;
   name: string;
   company: string;
   email: string;
@@ -19,8 +20,11 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm<Inputs>();
+
+  const inquiryType = watch("inquiryType");
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     fetch("/", {
       method: "POST",
@@ -54,8 +58,7 @@ export default function Contact() {
         ) : (
           <>
             <p>
-              商品の取り扱いや取材については、こちらからお問い合わせください。
-              <span>3営業日以内に返信いたします。</span>
+              RINDAの取り扱いや取材については、こちらからお問い合わせください。営業のお問い合わせは対応しておりません。
             </p>
             <form
               method="POST"
@@ -105,6 +108,20 @@ export default function Contact() {
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                 })}
               />
+              <label htmlFor="inquiryType">
+                種別
+                {errors.inquiryType?.type === "required" && (
+                  <span>*この項目は必須です</span>
+                )}
+              </label>
+              <select
+                id="inquiryType"
+                {...register("inquiryType", { required: true })}
+              >
+                <option value="">選択してください</option>
+                <option value="product">取材・商品問い合せ</option>
+                <option value="sales">営業</option>
+              </select>
               <label htmlFor="message">
                 お問い合わせ内容
                 {errors.message?.type === "required" && (
@@ -116,8 +133,15 @@ export default function Contact() {
                 rows={8}
                 {...register("message", { required: true })}
               ></textarea>
-              <button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "送信中" : "送信する"}
+              <button
+                type="submit"
+                disabled={isSubmitting || inquiryType === "sales"}
+              >
+                {isSubmitting
+                  ? "送信中"
+                  : inquiryType === "sales"
+                  ? "営業のお問い合わせは受け付けておりません"
+                  : "送信する"}
               </button>
             </form>
           </>
@@ -165,6 +189,7 @@ const formStyle = css`
 
   label,
   input,
+  select,
   textarea,
   button {
     display: block;
@@ -181,6 +206,7 @@ const formStyle = css`
   }
 
   input,
+  select,
   textarea {
     margin-bottom: 32px;
     background: ${tokens.colors.ivory};
@@ -192,6 +218,17 @@ const formStyle = css`
     }
   }
 
+  select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3e%3cpath fill='%238C0303' d='M6 8.5L1.5 3h9z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+  }
+
   button {
     border-radius: 16px;
     background: ${tokens.colors.azuki};
@@ -200,7 +237,7 @@ const formStyle = css`
     padding: 16px 32px;
 
     :disabled {
-      background: ${tokens.colors.orange};
+      background: #cccccc;
     }
   }
 
