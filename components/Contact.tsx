@@ -117,6 +117,12 @@ export default function Contact() {
               <select
                 id="inquiryType"
                 {...register("inquiryType", { required: true })}
+                style={{
+                  color:
+                    !inquiryType || inquiryType === ""
+                      ? "rgba(140, 3, 3, 0.4)"
+                      : undefined,
+                }}
               >
                 <option value="">選択してください</option>
                 <option value="product">取材・商品問い合せ</option>
@@ -227,6 +233,11 @@ const formStyle = css`
     background-repeat: no-repeat;
     background-position: right 16px center;
     padding-right: 40px;
+
+    &:invalid,
+    &[value=""] {
+      color: rgba(140, 3, 3, 0.4);
+    }
   }
 
   button {
