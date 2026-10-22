@@ -41,11 +41,6 @@ export default function Header() {
               Member
             </Scroll>
           </li>
-          <li>
-            <Scroll to="contact" smooth>
-              Contact
-            </Scroll>
-          </li>
         </ul>
       </nav>
       <section css={heroStyle}>

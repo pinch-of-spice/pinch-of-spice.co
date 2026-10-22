@@ -7,7 +7,7 @@ import Products from "../components/Products";
 import News from "../components/News";
 import Company from "../components/Company";
 import Members from "../components/Members";
-import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <News />
         <Company />
         <Members />
-        <Contact />
+        <Footer />
       </main>
     </>
   );
